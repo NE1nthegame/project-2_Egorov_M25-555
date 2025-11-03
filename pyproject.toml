@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "project-2-egorov-m25-555"
-version = "0.1.0"
+version = "0.1.1"
 description = "Primitive database project"
 authors = ["Egorov Georgij <Egorovgoo@yandex.ru>"]
 readme = "README.md"
