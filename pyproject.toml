@@ -9,7 +9,11 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-project = "src.primitive_db.main:main"
+database = "src.primitive_db.main:main"
+
+# Указываем установку скриптов в ~/.local/bin
+[tool.install]
+scripts-dir = "~/.local/bin"
 
 [tool.poetry.dependencies]
 python = "^3.9"
