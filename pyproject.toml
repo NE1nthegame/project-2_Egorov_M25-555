@@ -10,6 +10,7 @@ packages = [
 
 [tool.poetry.scripts]
 database = "src.primitive_db.main:main"
+project = "src.primitive_db.main:main"
 
 # Указываем установку скриптов в ~/.local/bin
 [tool.install]
