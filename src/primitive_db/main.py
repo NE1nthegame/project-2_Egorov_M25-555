@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
-
-try:
-    # Для случая, когда пакет установлен
-    from src.primitive_db.engine import welcome
-except ImportError:
-    # Для случая разработки
-    from .engine import welcome
+from .engine import run
 
 
 def main():
-    welcome()
+    run()
 
 
 if __name__ == '__main__':
