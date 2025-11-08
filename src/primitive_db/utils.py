@@ -6,7 +6,7 @@ def load_metadata():
     Загружает метаданные базы данных из файла.
     """
     try:
-        with open('metadata.json', 'r', encoding='utf-8') as f:
+        with open('metadata.json', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         return {}
@@ -26,7 +26,7 @@ def load_table_data(table_name):
     """
     filename = f"{table_name}.json"
     try:
-        with open(filename, 'r', encoding='utf-8') as f:
+        with open(filename, encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         return []
