@@ -1,6 +1,37 @@
-.venv/
-dist/
+# Файлы данных БД
+*.json
+!poetry.lock
+metadata.json
+db_meta.json
+data/
+
+# Файлы asciinema
+*.cast
+
+# Python кэш
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Poetry
+.poetry/
+
+# Сборки
+dist/
+build/
 *.egg-info/
-.python-version
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Системные
+.DS_Store
+Thumbs.db

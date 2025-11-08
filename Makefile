@@ -2,6 +2,8 @@ install:
 		poetry install
 project:
 		poetry run project
+database:
+		poetry run project
 build:
 		poetry build
 publish:

@@ -1,28 +1,19 @@
 [tool.poetry]
 name = "project-2-egorov-m25-555"
 version = "0.1.1"
-description = "Primitive database project"
+description = "Примитивная база данных с SQL-подобным синтаксисом"
 authors = ["Egorov Georgij <Egorovgoo@yandex.ru>"]
 readme = "README.md"
-packages = [
-    { include = "src", from = "." },
-]
-
-[tool.poetry.scripts]
-database = "src.primitive_db.main:main"
-project = "src.primitive_db.main:main"
-
-# Указываем установку скриптов в ~/.local/bin
-[tool.install]
-scripts-dir = "~/.local/bin"
+packages = [{include = "primitive_db", from = "src"}]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-prompt = "^0.4.1"
+python = "^3.8"
 prettytable = "^3.16.0"
+prompt = "^0.4.1"
 
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.1.6"
+[tool.poetry.scripts]
+database = "primitive_db.main:main"
+project = "primitive_db.main:main"
 
 [build-system]
 requires = ["poetry-core"]
@@ -30,9 +21,9 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 line-length = 88
-target-version = "py312"
-exclude = ["venv", ".venv", "dist", "__pycache__"]
-
-[tool.ruff.lint]
-select = ["E", "F", "I"]
+select = ["E", "F", "I", "N", "UP", "YTT"]
 ignore = []
+target-version = "py38"
+
+[tool.ruff.isort]
+known-first-party = ["primitive_db"]
