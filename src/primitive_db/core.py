@@ -15,8 +15,9 @@ def create_table(metadata, table_name, columns):
     if table_name in metadata:
         raise ValueError(f'Таблица "{table_name}" уже существует.')
 
-    allowed_types = {'int', 'str', 'bool'}
-    table_columns = ['ID:int']
+    from .constants import DEFAULT_COLUMNS, VALID_TYPES
+    allowed_types = VALID_TYPES
+    table_columns = DEFAULT_COLUMNS.copy()
 
     for column in columns:
         if ':' not in column:

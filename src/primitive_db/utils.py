@@ -16,7 +16,8 @@ def save_metadata(metadata):
     """
     Сохраняет метаданные базы данных в файл.
     """
-    with open('metadata.json', 'w', encoding='utf-8') as f:
+    from .constants import META_FILE
+    with open(META_FILE, encoding='utf-8') as f:
         json.dump(metadata, f, ensure_ascii=False, indent=2)
 
 
