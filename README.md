@@ -14,6 +14,10 @@ make install
 make build
 make package-install
 
+# Запуск проекта 
+database
+make database
+
 ## Cсылка1 на asciinema
 https://asciinema.org/a/xqEsokWs2ZzSjJ9Miq3SfuAH0
 

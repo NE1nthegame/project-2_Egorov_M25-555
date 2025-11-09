@@ -1,6 +1,7 @@
 # Файлы данных БД
 *.json
 !poetry.lock
+!pyproject.toml
 metadata.json
 db_meta.json
 data/
@@ -32,8 +33,10 @@ build/
 *.swp
 *.swo
 
+# Виртуальные окружения
+.venv/
+venv/
+
 # Системные
 .DS_Store
 Thumbs.db
-*.json
-data/
